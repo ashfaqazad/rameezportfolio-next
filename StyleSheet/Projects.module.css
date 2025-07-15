@@ -1,0 +1,98 @@
+.projectsSection {
+  display: flex; /* Make the section a flex container */
+  /* justify-content: center; Center content horizontally */
+  /* align-items: center; Center content vertically */
+  flex-direction: column; /* Stack heading and grid vertically */
+  min-height: 100vh; 
+  /* margin-top: -60px;  */
+  overflow: hidden;
+}
+
+.projectsHeading {
+  text-align: center;
+  font-size: 50px;
+  color: #8750f7;
+  margin-bottom: 30px;
+}
+
+.projectsCardsGrid {
+  display: grid; /* Use grid for responsive layout */
+  gap: 10px; /* Cards ke darmiyan spacing */
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 cards per row */
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto; /* Ensure grid is horizontally centered */
+  width: fit-content; /* Shrinks to fit cards */
+
+}
+
+.projectCard {
+  background: #1d1d1d; /* Dark background for card */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 1s ease, opacity 1s ease;
+  margin-bottom: 30px;
+}
+
+/* Hover Effect */
+.projectCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cardSubt {
+  font-size: 18px;
+  font-weight: bold;
+  color: #8750f7;
+}
+
+.cardRole {
+  font-size: 14px;
+  color: #8750f7;
+  margin-bottom: 10px;
+}
+
+.cardFeedback {
+  font-size: 16px;
+  color: white;
+  line-height: 1.5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .projectsCardsGrid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row for tablets */
+  }
+
+  .projectsHeading {
+    font-size: 40px;
+  }
+
+  .projectCard {
+    width: 100% !important;
+
+  }
+}
+
+@media (max-width: 480px) {
+  .projectsCardsGrid {
+    grid-template-columns: 1fr; /* 1 card per row for small screens */
+    padding: 10px;
+
+  }
+
+  .projectsHeading {
+    font-size: 30px;
+    margin-bottom: 30px !important;
+
+  }
+
+  .projectCard {
+    padding: 20px;
+    width: 100% !important;
+
+  }
+}

@@ -1,0 +1,116 @@
+
+
+
+
+/* Skills Component Styles */
+.skillsContainer {
+  /* padding: 50px; */
+  color: #c9d1d9;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.skillsHeading {
+  text-align: center;
+  font-size: 50px;
+  color: #58a6ff;
+  margin-bottom: 30px;
+}
+
+.skillsCardsGrid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+}
+
+.skillsCard {
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+  padding: 20px;
+  width: 350px; /* Fixed width for consistent layout */
+  /* height: auto; */
+  background-color: #161b22;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box; /* Ensure border is included in the card's total size */
+  transition: transform 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+  will-change: transform; /* Prevents layout shifting by informing the browser to optimize */
+}
+
+.skillsCard:hover {
+  transform: translateY(-5px); /* Slightly lift the card up without resizing */
+  background-color: #000;
+  border: 2px solid #58a6ff; /* Add primary color border */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Add shadow effect on hover */
+}
+
+.cardTitle {
+  color: #58a6ff;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.skillsList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skillsItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  color: #c9d1d9;
+}
+
+.skillName {
+  display: flex;
+  align-items: center;
+}
+
+.skillLevel {
+  color: #8b949e;
+}
+
+.svgIcon {
+  margin-right: 8px;
+  vertical-align: middle;
+  fill: #0d6efd;
+}
+
+
+.skillsContent{
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skillsHeading {
+    font-size: 40px;
+  }
+
+  .skillsCard {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .skillsHeading {
+    font-size: 30px;
+  }
+
+  .skillsCard {
+    padding: 15px;
+    width: 100%;
+  }
+
+  .cardTitle {
+    font-size: 18px;
+  }
+
+  .skillLevel {
+    font-size: 14px;
+  }
+}

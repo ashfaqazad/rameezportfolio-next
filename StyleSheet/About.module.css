@@ -1,0 +1,112 @@
+.aboutContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 50px;
+  background-color: #202020;
+  min-height: 100vh;
+}
+
+.aboutImage {
+  border: 2px solid #58a6ff;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 1s ease-in-out;
+  opacity: 1 !important;
+}
+
+.aboutImage img {
+  width: 250px;
+  height: 250px;
+}
+
+.aboutText {
+  margin-left: 50px;
+  max-width: 600px;
+  transition: transform 1s ease-in-out;
+}
+
+.aboutExpandedText {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.aboutText h2,
+.aboutExpandedText h2 {
+  font-size: 40px;
+  color: #58a6ff;
+  font-weight: bold;
+}
+
+.aboutText p,
+.aboutExpandedText p {
+  font-size: 18px;
+  line-height: 1.8;
+  text-align: left;
+
+
+  /* width: 1000px; */
+}
+
+
+.highlight {
+  /* color: #c778dd; */
+  color: #58a6ff;
+  font-weight: bolder;
+
+}
+
+.justifyText {
+  text-align: justify !important;
+  line-height: 1.6;
+  /* max-width: 800px; */
+  /* width: 700px; */
+}
+
+
+.aboutText button {
+  padding: 10px 20px;
+  margin-top: 5px;
+  background-color: #58a6ff;
+  color: #0d1117;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.aboutText button:hover {
+  background-color: #1f6feb;
+}
+
+.aboutExpandedText button {
+  padding: 10px 20px;
+  margin-top: 5px;
+  background-color: #58a6ff;
+  color: #0d1117;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.aboutExpandedText button:hover {
+  background-color: #1f6feb;
+
+}
+
+@media (max-width: 768px) {
+  .aboutContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .aboutText {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+}
